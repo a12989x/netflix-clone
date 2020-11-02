@@ -1,2 +1,56 @@
 .jumbotron {
+    width: 100%;
+    border-bottom: 8px solid #222222;
+    color: white;
+
+    &__container {
+        padding: 50px 7%;
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 50px;
+        line-height: 1.1;
+        margin-bottom: 8px;
+    }
+
+    &__subTitle {
+        font-size: 26px;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    &__img {
+        padding: 45px;
+    }
+
+    @media only screen and (min-width: 700px) {
+        &__container {
+            text-align: left;
+            grid-template: 1fr 1fr / 1fr 1fr;
+            gap: 1rem;
+        }
+
+        &__title {
+            font-size: 35px;
+            align-self: flex-end;
+        }
+
+        &__subTitle {
+            font-size: 18px;
+            align-self: flex-start;
+        }
+
+        &__img {
+            grid-column: 2 / -1;
+            grid-row: 1 / -1;
+
+            &-reverse {
+                grid-column: 1 / 2;
+            }
+        }
+    }
 }
