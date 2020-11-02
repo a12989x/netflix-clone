@@ -1,3 +1,18 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #000000;
+    color: #333333;
+    font-size: 16px;
+
+    .app {
+        img {
+            width: 100%;
+        }
+    }
+}
