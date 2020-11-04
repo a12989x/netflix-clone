@@ -1,0 +1,91 @@
+.ctaForm {
+    margin-top: 30px;
+
+    &__title {
+        margin-top: 0;
+        color: $white-color;
+        font-size: 23px;
+        font-weight: normal;
+        text-align: center;
+        padding: 0 10%;
+    }
+
+    &__inputWrapper {
+        margin: 10px auto;
+    }
+
+    &__btn {
+        padding: 16px;
+        color: $white-color;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 48px;
+        margin: 0 auto;
+        background-color: #e50914;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: #f40612;
+        }
+    }
+
+    &__chevronRightArrow {
+        margin-left: 10px;
+        position: relative;
+        width: 8px;
+        height: 15px;
+    }
+
+    @include respond(medium) {
+        &__inputWrapper {
+            max-width: 450px;
+        }
+
+        &__input {
+            height: 60px !important;
+            font-size: 16px;
+        }
+
+        &__btn {
+            font-size: 24px;
+            border: none;
+        }
+
+        &__chevronRightArrow {
+            transform: scale(1.4);
+            margin-left: 15px;
+        }
+    }
+
+    @media only screen and (min-width: 950px) {
+        display: grid;
+        grid-template: 2fr / 2fr;
+
+        &__title {
+            grid-column: 1 / -1;
+        }
+
+        &__inputWrapper {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            width: 100%;
+            margin: 0;
+            max-width: 1200px;
+        }
+
+        &__input {
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+        }
+
+        &__btn {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            height: 100%;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
