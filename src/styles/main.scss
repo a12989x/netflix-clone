@@ -6,5 +6,12 @@
 @import './base/reset';
 
 /* layout */
+@import './layout/input-wrapper';
 @import './layout/jumbotron';
 @import './layout/footer';
+@import './layout/faqs';
+@import './layout/faq';
+@import './layout/cta-form';
+
+/* components */
+@import './components/button';
