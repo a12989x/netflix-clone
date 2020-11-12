@@ -28,10 +28,19 @@
     }
 
     &__title {
-        font-size: 50px;
+        font-size: 35px;
+
+        @include respond(small) {
+            font-size: 50px;
+        }
     }
 
     &__subtitle {
         font-weight: normal;
+        font-size: 18px;
+
+        @include respond(small) {
+            font-size: 26px;
+        }
     }
 }
