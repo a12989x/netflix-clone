@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ReactComponent as ChevronArrowRight } from '../img/icons/chevron-right-arrow.svg';
+
 const CtaForm = () => {
     return (
         <form className='ctaForm'>
@@ -22,19 +24,7 @@ const CtaForm = () => {
             </div>
 
             <button className='ctaForm__btn'>
-                Start Here
-                <svg
-                    className='ctaForm__chevronRightArrow'
-                    viewBox='0 0 6 12'
-                    xmlns='http://www.w3.org/2000/svg'
-                >
-                    <desc>chevron</desc>
-                    <path
-                        d='M.61 1.312l.78-.624L5.64 6l-4.25 5.312-.78-.624L4.36 6z'
-                        fill='#ffffff'
-                        fill-rule='evenodd'
-                    ></path>
-                </svg>
+                Start Here <ChevronArrowRight />
             </button>
         </form>
     );
