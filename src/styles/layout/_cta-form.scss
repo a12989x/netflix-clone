@@ -15,23 +15,14 @@
     }
 
     &__btn {
-        padding: 16px;
-        color: $white-color;
-        border-radius: 4px;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 48px;
+        // height: 40px;
         margin: 0 auto;
-        background-color: #e50914;
-        transition: 0.3s;
-
-        &:hover {
-            background-color: #f40612;
-        }
     }
 
-    &__chevronRightArrow {
+    svg {
         margin-left: 10px;
         position: relative;
         width: 8px;
@@ -53,7 +44,7 @@
             border: none;
         }
 
-        &__chevronRightArrow {
+        svg {
             transform: scale(1.4);
             margin-left: 15px;
         }
