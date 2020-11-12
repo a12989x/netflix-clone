@@ -1,4 +1,13 @@
 button {
-    cursor: pointer;
+    padding: 10px 16px;
+    color: $white-color;
+    background-color: #e50914;
     border: 1px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #f40612;
+    }
 }
