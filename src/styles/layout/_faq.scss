@@ -13,6 +13,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        &:hover {
+            background-color: #303030;
+        }
     }
 
     &__svg-icon {
