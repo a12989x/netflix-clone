@@ -16,6 +16,7 @@ const CtaForm = () => {
                     id='email'
                     minLength='5'
                     maxLength='50'
+                    required={true}
                     autoComplete='email'
                 />
                 <label className='ctaForm__label' htmlFor='email'>
