@@ -11,8 +11,8 @@ const Header = () => {
         <header className='header'>
             <img className='header__imgBg' src={HomeBg} alt='home background' />
             <nav className='header__nav'>
-                <Logo className='header__logo' />{' '}
-                <Link to='/sign-in'>
+                <Logo className='header__logo' />
+                <Link to='/signin'>
                     <button>Sign In</button>
                 </Link>
             </nav>
