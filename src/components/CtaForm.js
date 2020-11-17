@@ -2,6 +2,8 @@ import React from 'react';
 
 import { ReactComponent as ChevronArrowRight } from '../img/icons/chevron-right-arrow.svg';
 
+import InputWrapper from './InputWrapper';
+
 const CtaForm = () => {
     return (
         <form className='ctaForm'>
@@ -9,20 +11,17 @@ const CtaForm = () => {
                 Ready to watch? Enter your email to create or restart your
                 membership.
             </h3>
-            <div className='ctaForm__inputWrapper inputWrapper'>
-                <input
-                    className='ctaForm__input'
-                    type='email'
-                    id='email'
-                    minLength='5'
-                    maxLength='50'
-                    required={true}
-                    autoComplete='email'
-                />
-                <label className='ctaForm__label' htmlFor='email'>
-                    Email Address
-                </label>
-            </div>
+            <InputWrapper
+                className='ctaForm'
+                value={''}
+                onChange={''}
+                type='email'
+                id='email'
+                minLength='5'
+                maxLength='50'
+                autoComplete={true}
+                label='Email'
+            />
 
             <button className='ctaForm__btn'>
                 Start Here <ChevronArrowRight />
