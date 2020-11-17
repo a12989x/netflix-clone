@@ -1,0 +1,19 @@
+.signIn {
+    position: relative;
+    border-bottom: 8px solid $dark-color;
+
+    &__imgBg {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        // display: none;
+    }
+
+    &__logo {
+        width: 100px;
+        margin: 32px 40px;
+    }
+}
