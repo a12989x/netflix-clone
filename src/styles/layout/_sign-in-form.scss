@@ -12,6 +12,15 @@
         margin-top: 0;
     }
 
+    &__error {
+        padding: 10px 15px;
+        margin: 0;
+        background-color: #e87c03;
+        border-radius: 2px;
+        font-weight: bolder;
+        overflow-x: hidden;
+    }
+
     &__inputWrapper {
         input {
             background-color: #333333;
