@@ -3,7 +3,8 @@ import React from 'react';
 const InputWrapper = ({
     className,
     value,
-    handleChange,
+    name,
+    onChange,
     type,
     id,
     minLength,
@@ -14,16 +15,17 @@ const InputWrapper = ({
     return (
         <div className={`${className}__inputWrapper inputWrapper`}>
             <input
-                value={value}
-                onChange={handleChange}
                 type={type}
                 id={id}
+                name={name}
                 minLength={minLength}
                 maxLength={maxLength}
                 required={true}
                 autoComplete={autoComplete}
+                value={value}
+                onChange={onChange}
             />
-            <label htmlFor='email'>{label}</label>
+            <label htmlFor={id}>{label}</label>
         </div>
     );
 };
