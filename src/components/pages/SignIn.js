@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import HomeBg from '../../img/misc/home-bg.jpg';
 import { ReactComponent as Logo } from '../../img/misc/logo.svg';
