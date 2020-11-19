@@ -2,7 +2,7 @@ import React, { createContext } from 'react';
 
 import { firebase } from '../../lib/firebase.prod';
 
-const FirebaseContext = createContext();
+export const FirebaseContext = createContext();
 
 const FirebaseContextProvider = ({ children }) => {
     return (
