@@ -1,21 +1,27 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from './contexts/AuthContext';
 
 import InputWrapper from './InputWrapper';
 
 const SignInForm = () => {
+    const { values, handleChange, error, SignIn } = useContext(AuthContext);
+
     const [isLearnMoreActive, setIsLearnMoreActive] = useState(false);
 
     return (
-        <form className='signInForm'>
+        <form className='signInForm' onSubmit={SignIn}>
             <h1 className='signInForm__title'>Sign In</h1>
+
+            {error.length !== 0 && <p className='signInForm__error'>{error}</p>}
 
             <InputWrapper
                 className='signInForm'
-                value={''}
-                onChange={''}
+                value={values.email}
+                onChange={handleChange}
                 type='email'
                 id='email'
+                name='email'
                 minLength='5'
                 maxLength='50'
                 autoComplete='email'
@@ -24,10 +30,11 @@ const SignInForm = () => {
 
             <InputWrapper
                 className='signInForm'
-                value={''}
-                onChange={''}
+                value={values.password}
+                onChange={handleChange}
                 type='password'
                 id='password'
+                name='password'
                 minLength='5'
                 maxLength='50'
                 autoComplete='password'
@@ -37,12 +44,12 @@ const SignInForm = () => {
             <button className='signInForm__btn'>Sign In</button>
 
             <p className='signInForm__signUpNow'>
-                New to Netflix? <Link to='/'>Sign up now</Link>
+                New to Netflix? <Link to='/signup'>Sign up now</Link>
             </p>
 
             <p className='signInForm__termsOfUse'>
                 This page is protected by Google reCAPTCHA to ensure you're not
-                a bot.{' '}
+                a bot.
                 {!isLearnMoreActive && (
                     <span onClick={() => setIsLearnMoreActive(true)}>
                         Learn More
