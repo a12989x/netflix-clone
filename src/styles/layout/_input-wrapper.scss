@@ -4,10 +4,15 @@
     position: relative;
     overflow: hidden;
 
+    input:valid + label,
     input:focus + label {
         font-size: 10px;
         top: 12px;
         font-weight: bold;
+    }
+
+    input:invalid {
+        border-color: $red-color;
     }
 
     input {
@@ -17,6 +22,8 @@
         background-color: $white-color;
         border-radius: 2px;
         border: none;
+        border-bottom: 1px solid $green-color;
+        transition: border 0.3s;
     }
 
     label {
