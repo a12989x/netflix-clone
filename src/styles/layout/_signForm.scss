@@ -1,0 +1,61 @@
+.signForm {
+    padding: 60px 68px 40px;
+    max-width: 500px;
+    min-height: 660px;
+    margin: 0 auto 68px;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: grid;
+    align-content: start;
+    row-gap: 16px;
+
+    &__title {
+        margin-top: 0;
+    }
+
+    &__error {
+        padding: 10px 15px;
+        margin: 0;
+        background-color: #e87c03;
+        border-radius: 2px;
+        font-weight: bolder;
+        overflow-x: hidden;
+    }
+
+    &__inputWrapper {
+        input {
+            background-color: #333333;
+        }
+    }
+
+    &__btn {
+        margin-top: 16px;
+        font-weight: bold;
+        padding: 16px;
+    }
+
+    &__signNow {
+        color: $gray-color;
+        font-size: 18px;
+
+        a {
+            color: $white-color;
+            text-decoration: underline !important;
+        }
+    }
+
+    &__termsOfUse {
+        font-size: 13px;
+        color: $gray-color;
+
+        span,
+        a {
+            cursor: pointer;
+            color: #0071eb;
+            text-decoration: underline;
+        }
+
+        &-hidden {
+            margin-top: 0;
+        }
+    }
+}
