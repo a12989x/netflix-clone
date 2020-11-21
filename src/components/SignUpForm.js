@@ -6,10 +6,10 @@ import InputWrapper from './InputWrapper';
 import TermsOfUse from './TermsOfUse';
 
 const SignUpForm = () => {
-    const { values, handleChange, error } = useContext(AuthContext);
+    const { values, handleChange, error, SignUp } = useContext(AuthContext);
 
     return (
-        <form className='signForm'>
+        <form className='signForm' onSubmit={SignUp}>
             <h1 className='signForm__title'>Sign Up</h1>
 
             {error.length !== 0 && <p className='signForm__error'>{error}</p>}
