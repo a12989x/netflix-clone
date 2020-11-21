@@ -7,9 +7,9 @@ import SignInForm from '../SignInForm';
 
 const SignIn = () => {
     return (
-        <div className='signIn'>
-            <img className='signIn__imgBg' src={HomeBg} alt='home background' />
-            <Logo className='signIn__logo' />
+        <div className='sign'>
+            <img className='sign__imgBg' src={HomeBg} alt='home background' />
+            <Logo className='sign__logo' />
 
             <SignInForm />
         </div>
