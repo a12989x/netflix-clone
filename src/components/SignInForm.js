@@ -1,22 +1,21 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from './contexts/AuthContext';
 
 import InputWrapper from './InputWrapper';
+import TermsOfUse from './TermsOfUse';
 
 const SignInForm = () => {
     const { values, handleChange, error, SignIn } = useContext(AuthContext);
 
-    const [isLearnMoreActive, setIsLearnMoreActive] = useState(false);
-
     return (
-        <form className='signInForm' onSubmit={SignIn}>
-            <h1 className='signInForm__title'>Sign In</h1>
+        <form className='signForm' onSubmit={SignIn}>
+            <h1 className='signForm__title'>Sign In</h1>
 
-            {error.length !== 0 && <p className='signInForm__error'>{error}</p>}
+            {error.length !== 0 && <p className='signForm__error'>{error}</p>}
 
             <InputWrapper
-                className='signInForm'
+                className='signForm'
                 value={values.email}
                 onChange={handleChange}
                 type='email'
@@ -29,7 +28,7 @@ const SignInForm = () => {
             />
 
             <InputWrapper
-                className='signInForm'
+                className='signForm'
                 value={values.password}
                 onChange={handleChange}
                 type='password'
@@ -41,38 +40,13 @@ const SignInForm = () => {
                 label='Password'
             />
 
-            <button className='signInForm__btn'>Sign In</button>
+            <button className='signForm__btn'>Sign In</button>
 
-            <p className='signInForm__signUpNow'>
+            <p className='signForm__signNow'>
                 New to Netflix? <Link to='/signup'>Sign up now</Link>
             </p>
 
-            <p className='signInForm__termsOfUse'>
-                This page is protected by Google reCAPTCHA to ensure you're not
-                a bot.
-                {!isLearnMoreActive && (
-                    <span onClick={() => setIsLearnMoreActive(true)}>
-                        Learn More
-                    </span>
-                )}
-            </p>
-
-            {isLearnMoreActive && (
-                <p className='signInForm__termsOfUse signInForm__termsOfUse-hidden'>
-                    The information collected by Google reCAPTCHA is subject to
-                    the Google
-                    <a href='https://policies.google.com/privacy'>
-                        Privacy Policy
-                    </a>
-                    and
-                    <a href='https://policies.google.com/terms'>
-                        Terms of Service
-                    </a>
-                    , and is used for providing, maintaining, and improving the
-                    reCAPTCHA service and for general security purposes (it is
-                    not used for personalized advertising by Google).
-                </p>
-            )}
+            <TermsOfUse />
         </form>
     );
 };
